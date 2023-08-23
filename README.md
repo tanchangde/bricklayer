@@ -8,7 +8,7 @@ Bricklayer，意为泥瓦匠，主要工作内容是搬砖抹灰砌墙。
 
 ## 环境配置
 
-### 安装 Chrome
+### Chrome
 
 为模拟人工，避免被识别为机器人。同时提供可见的交互，用于低成本监控、介入下载任务。我们需要借助 Chrome。
 
@@ -18,7 +18,7 @@ Bricklayer，意为泥瓦匠，主要工作内容是搬砖抹灰砌墙。
 
 请尽量通过官方网站或可信软件市场安装 Chrome。
 
-### 下载 ChromeDriver
+### ChromeDriver
 
 请下载与 Chrome 版本号一致，且适用您所用操作系统的 ChromeDriver。最新的几个版本见 [Chrome for Testing availability](https://googlechromelabs.github.io/chrome-for-testing/)。
 
