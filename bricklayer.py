@@ -989,7 +989,7 @@ def wos_download_bricklayer(driver, query_content, start_record, end_record, dow
                          download_task_log_path, "failure", str(e))
             else:
                 print("提示：进入故障排查...")
-                wos_detective_inspector()
+                wos_detective_inspector(driver)
                 if driver.current_url != url_query_result:
                     print("提示：当前 URL 与首次查询结果页不一致，现返回...")
                     driver.get(url_query_result)
