@@ -12,6 +12,7 @@ import shutil
 import logging
 from datetime import datetime
 from selenium import webdriver
+from screeninfo import get_monitors
 # https://github.com/ultrafunkamsterdam/undetected-chromedriver/pull/1478
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
@@ -381,7 +382,8 @@ def initiate_sunshine_login(driver, username, password):
         print("提示：日光图书馆全新登录失败。")
 
 
-def login_to_channel(channel, username, password, user_data_path=None, wos_download_path=None):
+def login_to_channel(channel, username, password, user_data_path=None,
+                     wos_download_path=None, window_percentage=80):
     """
     登录到指定 WoS 权限通道网站。
 
@@ -390,6 +392,7 @@ def login_to_channel(channel, username, password, user_data_path=None, wos_downl
     - username: 登录的用户名
     - password: 登录的密码
     - user_data_path: 用户数据文件夹路径
+    - window_percentage: 实例窗口大小占显示器大小的百分比，范围从 1 到 100。默认为 80%。
 
     返回:
     - driver: 登录尝试后的WebDriver实例
@@ -409,6 +412,8 @@ def login_to_channel(channel, username, password, user_data_path=None, wos_downl
     # 使用之前的函数初始化 driver
     print("提示：初始化 Chrome WebDriver...")
     driver = create_chrome_driver(user_data_path, wos_download_path)
+    set_browser_to_percentage_of_screen(
+        driver=driver, percentage=window_percentage)
     driver.get(urls[channel])
 
     # 验证是否成功登录
@@ -1249,3 +1254,20 @@ def extract_content(s):
     except Exception as e:
         print(f"错误: {e}")
         raise
+
+
+def set_browser_to_percentage_of_screen(driver, percentage=80):
+    """
+    根据给定的百分比设置 WebDriver 实例窗口的大小。
+
+    参数:
+    - driver: WebDriver 实例。
+    - percentage: 实例窗口大小占显示器大小的百分比，范围从 1 到 100。默认为 80%。
+
+    返回:
+    无。函数会直接更改 WebDriver 实例的窗口大小。
+    """
+    monitor = get_monitors()[0]
+    width = int(monitor.width * percentage / 100)
+    height = int(monitor.height * percentage / 100)
+    driver.set_window_size(width, height)
