@@ -1,6 +1,6 @@
 # Bricklayer
 
-Bricklayer，意为泥瓦匠匠，主要工作内容是搬砖抹灰砌墙。
+Bricklayer，意为泥瓦匠，主要工作内容是搬砖抹灰砌墙。
 
 ## 动机
 
