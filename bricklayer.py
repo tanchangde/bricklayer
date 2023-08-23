@@ -65,11 +65,11 @@ def validate_and_create_path(path, verbose=True):
 
 def verify_element_value(driver, xpath, expected_value, return_bool=False, verbose=True):
     """
-    通过给定的XPath定位到元素并获取其值，然后与期望的值进行比较。
+    通过给定的 XPath 定位到元素并获取其值，然后与期望的值进行比较。
 
     参数:
     - driver: WebDriver 实例。
-    - xpath: 用于定位元素的XPath字符串。
+    - xpath: 用于定位元素的 XPath 字符串。
     - expected_value: 期望的值，可以是字符串或数字。
     - return_bool: 是否返回布尔值。如果为 False 并且值不匹配，将会抛出异常。
     - verbose: 是否在关键步骤打印详细信息，默认为True。
@@ -90,7 +90,7 @@ def verify_element_value(driver, xpath, expected_value, return_bool=False, verbo
     element_value = element.get_attribute("value")
     if element_value is None:
         element_value = element.text
-    print_verbose(f"提示：获取到的元素值为：{element_value}")
+    print_verbose(f"提示：待验证元素值为：{element_value}")
 
     # 将值转为字符串进行比较
     if isinstance(expected_value, (int, float)):
@@ -99,13 +99,13 @@ def verify_element_value(driver, xpath, expected_value, return_bool=False, verbo
         element_value = str(element_value)
 
     if element_value == expected_value:
-        print_verbose("提示：元素的值与期望的值匹配。")
+        print_verbose("提示：待验证元素与预期值匹配。")
         if return_bool:
             return True
     else:
         if return_bool:
             return False
-        raise ValueError(f"元素的值({element_value})与期望的值({expected_value})不匹配。")
+        raise ValueError(f"待验证元素值 {element_value} 与预期值 {expected_value} 不符合。")
 
 
 def get_power_law_pause(min_pause=1.618, max_pause=5.42, exponent=0.2):
