@@ -149,7 +149,7 @@ def is_domain_present(driver, domain, timeout=20, check_interval=5, verbose=True
     参数:
     - driver: webdriver 实例
     - domain: 要检查的域名
-    - timeout: 在返回 False 前等待的最大时间
+    - timeout: 检测超时时长
     - check_interval: 每次检查之间等待的时间
     - verbose: 是否打印详细信息
 
@@ -157,25 +157,33 @@ def is_domain_present(driver, domain, timeout=20, check_interval=5, verbose=True
     如果找到域名则返回 True, 否则返回 False。
     """
 
-    if verbose:
-        print(f"提示：正在以 {check_interval} 秒一次的频率，检查 {domain} 是否出现在浏览器标签...")
+    print_verbose(
+        f"提示：正在以 {check_interval} 秒一次的频率，检查 {domain} 是否出现在浏览器 Tab...")
+
+    # 优先检查当前 tab
+    if domain in driver.current_url:
+        print_verbose(f"提示：URL {domain} 已出现在当前 Tab！")
+        return True
 
     end_time = time.time() + timeout
     check_count = 0
+    current_handle = driver.current_window_handle
 
     while time.time() < end_time:
         check_count += 1
+        # 检查其他tabs
         for handle in driver.window_handles:
+            if handle == current_handle:
+                continue  # Skip current tab as we already checked it
             driver.switch_to.window(handle)
             if domain in driver.current_url:
-                if verbose:
-                    print(f"提示：域名 {domain} 已出现！")
+                print_verbose(f"提示：URL {domain} 已出现在其他 Tab！")
                 return True
+
         print_verbose(f"提示：第 {check_count} 次检查未发现 {domain}。")
         time.sleep(check_interval)
 
-    if verbose:
-        print(f"提示：经历 {check_count} 次检查后还是没检查到 {domain}。")
+    print_verbose(f"提示：经历 {check_count} 次检查后还是没检查到 {domain}。")
     return False
 
 
