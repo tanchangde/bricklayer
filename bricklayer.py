@@ -391,7 +391,7 @@ def initiate_sunshine_login(driver, username, password):
 
 
 def login_to_channel(channel, username, password, user_data_path=None,
-                     wos_download_path=None, window_percentage=80):
+                     wos_download_path=None, window_percentage=80, verbose=False):
     """
     登录到指定 WoS 权限通道网站。
 
@@ -412,23 +412,23 @@ def login_to_channel(channel, username, password, user_data_path=None,
         # 这里可以添加其他 channels 和其对应的 urls
     }
 
-    print("提示：正在验证 channel 类型...")
+    print_verbose(message="提示：正在验证 channel 类型...", verbose=verbose)
     if channel not in urls:
         print(f"错误：未定义的 channel: {channel}。")
         return None
 
     # 使用之前的函数初始化 driver
-    print("提示：初始化 Chrome WebDriver...")
+    print_verbose(message="提示：初始化 Chrome WebDriver...", verbose=verbose)
     driver = create_chrome_driver(user_data_path, wos_download_path)
     set_browser_to_percentage_of_screen(
-        driver=driver, percentage=window_percentage)
+        driver=driver, percentage=window_percentage, verbose=verbose)
     driver.get(urls[channel])
 
     # 验证是否成功登录
-    print("提示：正在验证登录状态...")
+    print_verbose(message="提示：正在验证登录状态...", verbose=verbose)
     if channel == "sunshine":
         if not is_sunshine_logged_in(driver):
-            print("提示：用户未登录，现在进行登录。")
+            print("提示：用户未登录，现在登录。")
             initiate_sunshine_login(driver, username, password)
 
     # TODO: 其他来源
