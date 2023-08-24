@@ -391,7 +391,7 @@ def initiate_sunshine_login(driver, username, password):
 
 
 def login_to_channel(channel, username, password, user_data_path=None,
-                     wos_download_path=None, window_percentage=80, verbose=False):
+                     wos_download_path=None, window_percentage=90, verbose=False):
     """
     登录到指定 WoS 权限通道网站。
 
@@ -1264,7 +1264,7 @@ def extract_content(s):
         raise
 
 
-def set_browser_to_percentage_of_screen(driver, percentage=80, verbose=False):
+def set_browser_to_percentage_of_screen(driver, percentage=90, verbose=False):
     """
     根据给定的百分比设置 WebDriver 实例窗口的大小。
 
