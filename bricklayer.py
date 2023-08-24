@@ -1264,7 +1264,7 @@ def extract_content(s):
         raise
 
 
-def set_browser_to_percentage_of_screen(driver, percentage=80):
+def set_browser_to_percentage_of_screen(driver, percentage=80, verbose=False):
     """
     根据给定的百分比设置 WebDriver 实例窗口的大小。
 
@@ -1275,7 +1275,12 @@ def set_browser_to_percentage_of_screen(driver, percentage=80):
     返回:
     无。函数会直接更改 WebDriver 实例的窗口大小。
     """
-    monitor = get_monitors()[0]
-    width = int(monitor.width * percentage / 100)
-    height = int(monitor.height * percentage / 100)
-    driver.set_window_size(width, height)
+    try:
+        monitor = get_monitors()[0]
+        width = int(monitor.width * percentage / 100)
+        height = int(monitor.height * percentage / 100)
+        driver.set_window_size(width, height)
+        print_verbose(
+            message=f"提示:已设置实窗口为显示器尺寸的 %{percentage}", verbose=verbose)
+    except Exception as e:
+        print(f"错误:{e}")
