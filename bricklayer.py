@@ -1006,6 +1006,7 @@ def wos_download_bricklayer(driver, query_content, start_record, end_record, dow
                 if driver.current_url != url_query_result:
                     print("提示：当前 URL 与首次查询结果页不一致，现返回...")
                     driver.get(url_query_result)
+                    random_scroll_partial(driver, ['down'], arrows=9)
 
 
 def wos_log_query_task(query_content, start, end, total_records, download_task_log_path="."):
