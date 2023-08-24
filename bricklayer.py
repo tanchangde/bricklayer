@@ -139,7 +139,7 @@ def random_delay(min_sec=1.8, max_sec=5.42, verbose=True):
     sleep_time = get_power_law_pause(min_pause=min_sec, max_pause=max_sec)
     time.sleep(sleep_time)
     if verbose:
-        print(f"提示：作为一只小懒🐱，你偷眯 {sleep_time:.2f} 秒钟。")
+        print(f"提示：按幂律分布装睡 {sleep_time:.2f} 秒.")
 
 
 def is_domain_present(driver, domain, timeout=20, check_interval=5, verbose=True):
