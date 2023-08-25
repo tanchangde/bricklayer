@@ -93,7 +93,7 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
     cd path/to/your/project
     ```
 
-    使用 `environment.yml` 创建Conda环境:
+    使用 `environment.yml` 创建 Conda 环境:
 
     ```bash
     conda env create -f environment.yml
