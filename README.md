@@ -42,7 +42,7 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 #### 方法一:使用 `requirements.txt`
 
-1. **安装Python和pip**
+1. **安装 Python 和 pip**
   
     如果您还没有安装 Python 和 pip,可以从官方网站下载并安装:[Python下载页面](https://www.python.org/downloads/mac-osx/)
 
@@ -78,7 +78,7 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 ### 方法二:使用 `environment.yml`(适用于 Conda 用户)
 
-1. **安装Anaconda或Miniconda**
+1. **安装 Anaconda 或 Miniconda**
   
     如果您还没有安装 Anaconda 或 Miniconda,可以选择其一进行安装.若果没有重度的数据科学相关使用,推荐更轻量的 Miniconda.:
 
