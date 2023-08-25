@@ -32,9 +32,9 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 本项目样例,使用 `ipynb` 文件,即 `Jupyter Notebooks` 提供.所以,我们需要一个支持这种文件的编辑器.这里推荐 Visual Studio Code,微软出品,下限有保障.当然,您也可以采用你熟悉的工具.
 
-关于在 VS Code中使用 `Jupyter Notebooks`,请优先参考 [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
+关于在 VS Code 中使用 `Jupyter Notebooks`,请优先参考 [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
 
-安装好 VS Code之后,利用其打开 Python 文件或 Jupyter 文件时.VS Code会提示安装相关的官方插件,不要犹豫,安装即可.
+安装好 VS Code 之后,利用其打开 Python 文件或 Jupyter 文件时.VS Code 会提示安装相关的官方插件,不要犹豫,安装即可.
 
 ### Python
 
