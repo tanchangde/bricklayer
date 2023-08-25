@@ -97,7 +97,8 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
     conda env create -f environment.yml
     ```
 
-3. **激活环境**  
+3. **激活环境**
+
     创建环境后,它通常会有一个名称（您可以在 `environment.yml` 文件的第一行找到它,它紧跟在 `name:` 之后）.假设名称为 `myenv`,您可以这样激活它:
 
     ```bash
