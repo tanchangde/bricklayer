@@ -49,23 +49,23 @@ Bricklayer，泥瓦匠，主要工作是搬砖抹灰砌墙。
   
 终端下，进入项目目录:
 
-    ```bash
-    cd path/to/your/project
-    ```
+```bash
+cd path/to/your/project
+```
 
 使用 `environment。yml` 创建 Conda 环境:
 
-    ```bash
-    conda env create -f environment。yml
-    ```
+```bash
+conda env create -f environment。yml
+```
 
 #### 激活环境
 
 创建环境后，它会有一个名称（你可以在 `environment。yml` 文件的第一行找到它，它紧跟在 `name:` 之后），你可以这样激活它:
 
-    ```bash
-    conda activate bricklayer
-    ```
+```bash
+conda activate bricklayer
+```
 
 ## 用例
 
