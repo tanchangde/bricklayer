@@ -36,47 +36,9 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 安装好 VS Code 之后,利用其打开 Python 文件或 Jupyter 文件时.VS Code 会提示安装相关的官方插件,不要犹豫,安装即可.
 
-### Python
+### 复现项目环境
 
 为了确保您能够正确地复现 Python 项目的环境,以下简明操作指南,将会指导您如何使用 `requirements.txt` 或 `environment.yml` 在 macOS 上配置环境.
-
-#### 方法一:使用 `requirements.txt`
-
-1. **安装 Python 和 pip**
-  
-    如果您还没有安装 Python 和 pip,可以从官方网站下载并安装:[Python下载页面](https://www.python.org/downloads/mac-osx/)
-
-2. **创建虚拟环境** (推荐,但不是必须)  
-
-    使用 Python 内置的 `venv` 模块可以为您的项目创建一个独立的环境.
-
-    在终端中,进入到项目的目录:
-
-    ```bash
-    cd path/to/your/project
-    ```
-
-    创建虚拟环境:
-
-    ```bash
-    python3 -m venv myenv
-    ```
-
-    激活虚拟环境:
-
-    ```bash
-    source myenv/bin/activate
-    ```
-
-3. **安装依赖**
-
-    确保您在项目的目录中,并使用以下命令安装 `requirements.txt` 中的依赖:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### 方法二:使用 `environment.yml`(适用于 Conda 用户)
 
 1. **安装 Anaconda 或 Miniconda**
   
@@ -115,3 +77,5 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 * 230823,长德新建
 * 230825,重写 Python 环境配置
+* 230116
+  * 更新项目环境复现文件
