@@ -69,7 +69,7 @@ conda activate bricklayer
 
 ## 举个🌰
 
-请参考 [Demo](demo。ipynb)。
+请参考 [Demo](demo.ipynb)。
 
 ## ChangeLog
 
