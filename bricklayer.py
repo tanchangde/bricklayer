@@ -12,8 +12,7 @@ import shutil
 import logging
 from datetime import datetime
 from selenium import webdriver
-from screeninfo import get_monitors
-# https://github.com/ultrafunkamsterdam/undetected-chromedriver/pull/1478
+from screeninfo import get_monitorss
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
