@@ -38,7 +38,7 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 ### 复现项目环境
 
-为了确保您能够正确地复现 Python 项目的环境,以下简明操作指南,将会指导您如何使用 `requirements.txt` 或 `environment.yml` 在 macOS 上配置环境.
+为了确保您能够正确地复现 Python 项目的环境,以下简明操作指南,将会指导您如何使用 `environment.yml` 在 macOS 上配置环境.
 
 1. **安装 Anaconda 或 Miniconda**
   
@@ -77,5 +77,5 @@ Bricklayer,意为泥瓦匠,主要工作内容是搬砖抹灰砌墙.
 
 * 230823,长德新建
 * 230825,重写 Python 环境配置
-* 230116
+* 240116
   * 更新项目环境复现文件
