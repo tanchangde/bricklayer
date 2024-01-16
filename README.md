@@ -42,8 +42,8 @@ Bricklayer，泥瓦匠，主要工作是搬砖抹灰砌墙。
   
 如果你还没有安装 Anaconda 或 Miniconda，可以选择其一安装。若无重度数据相关使用，推荐轻量的 Miniconda。
 
-    - [Anaconda下载页面](https://www.anaconda.com/products/distribution#download-section)
-    - [Miniconda下载页面](https://docs.conda.io/en/latest/miniconda.html)
+* [Anaconda下载页面](https://www.anaconda.com/products/distribution#download-section)
+* [Miniconda下载页面](https://docs.conda.io/en/latest/miniconda.html)
 
 #### 创建环境
   
