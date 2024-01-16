@@ -45,7 +45,7 @@ Bricklayer，泥瓦匠，主要工作是搬砖抹灰砌墙。
 * [Anaconda下载页面](https://www.anaconda.com/products/distribution#download-section)
 * [Miniconda下载页面](https://docs.conda.io/en/latest/miniconda.html)
 
-#### 创建环境
+#### 创建虚拟环境
   
 终端下，进入项目目录:
 
@@ -59,7 +59,7 @@ cd path/to/your/project
 conda env create -f environment。yml
 ```
 
-#### 激活环境
+#### 激活虚拟环境
 
 创建环境后，它会有一个名称（你可以在 `environment。yml` 文件的第一行找到它，它紧跟在 `name:` 之后），你可以这样激活它:
 
@@ -67,7 +67,7 @@ conda env create -f environment。yml
 conda activate bricklayer
 ```
 
-## 用例
+## 举个🌰
 
 请参考 [Demo](demo。ipynb)。
 
