@@ -53,15 +53,15 @@ Bricklayer，泥瓦匠，主要工作是搬砖抹灰砌墙。
 cd path/to/your/project
 ```
 
-使用 `environment。yml` 创建 Conda 环境:
+从文件复现 Conda 环境:
 
 ```bash
-conda env create -f environment。yml
+conda env create -f environment.yml
 ```
 
 #### 激活虚拟环境
 
-创建环境后，它会有一个名称（你可以在 `environment。yml` 文件的第一行找到它，它紧跟在 `name:` 之后），你可以这样激活它:
+在环境文件的第一行，紧跟在 `name:` 之后，可找到我们复现的虚拟环境名字。这里是 "bricklayer"，你可以像下面这样激活虚拟环境：
 
 ```bash
 conda activate bricklayer
